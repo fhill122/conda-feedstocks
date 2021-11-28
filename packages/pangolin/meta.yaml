@@ -1,0 +1,30 @@
+{% set version = "0.6" %}
+
+package:
+  name: pangolin
+  version: {{ version }}
+
+source:
+  url: https://github.com/stevenlovegrove/Pangolin/archive/refs/tags/v{{ version }}.tar.gz
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - ninja
+  host:
+    - glew
+  run:
+    - glew
+
+about:
+  home: https://github.com/stevenlovegrove/Pangolin
+  license: MIT
+  license_family: MIT
+  license_file: LICENCE
+  summary: Pangolin is a lightweight portable rapid development library for managing OpenGL display / interaction and abstracting video input.
+  dev_url: https://github.com/stevenlovegrove/Pangolin
+  doc_url: https://github.com/stevenlovegrove/Pangolin
+
+
