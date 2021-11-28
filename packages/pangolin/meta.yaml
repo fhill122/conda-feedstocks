@@ -1,3 +1,7 @@
+# has issue: the generated PangolinConfig.cmake is incorrect
+# PKGS_REQUIRED+=(glew eigen cmake)
+# PKGS_RECOMMENDED+=(libjpeg libpng openexr libtiff ffmpeg lz4 zstd catch2)
+
 {% set version = "0.6" %}
 
 package:
