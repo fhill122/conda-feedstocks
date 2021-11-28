@@ -1,0 +1,35 @@
+{% set version = "2020.12.23" %}
+{% set git_tag = "20201223" %}
+
+package:
+  name: g2o
+  version: {{ version }}
+
+source:
+  url: https://github.com/RainerKuemmerle/g2o/archive/refs/tags/{{ git_tag }}_git.tar.gz
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    - eigen
+    - suitesparse
+  run:
+    - suitesparse
+
+test:
+  commands:
+    - g2o --help
+
+about:
+  home: https://github.com/RainerKuemmerle/g2o
+  license: LGPL-3.0-or-later
+  license_file: doc/license-lgpl.txt
+  summary: |
+    g2o - General Graph Optimization
+  dev_url: https://github.com/RainerKuemmerle/g2o
+  doc_url: https://openslam-org.github.io/g2o.html
+
+
