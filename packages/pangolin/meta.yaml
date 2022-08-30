@@ -2,7 +2,14 @@
 # PKGS_REQUIRED+=(glew eigen cmake)
 # PKGS_RECOMMENDED+=(libjpeg libpng openexr libtiff ffmpeg lz4 zstd catch2)
 
-{% set version = "0.6" %}
+# how to fix?
+# remove:
+# FILE(REMOVE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Targets.cmake")
+# export( TARGETS ${LIBRARY_NAME}
+#         APPEND FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Targets.cmake" )
+# lib becomes: pangolin, zlib
+
+{% set version = "0.8" %}
 
 package:
   name: pangolin
@@ -19,6 +26,7 @@ requirements:
     - ninja
   host:
     - glew
+    - eigen
   run:
     - glew
 
