@@ -1,0 +1,8 @@
+{% set version = "0.0.0" %}
+
+package:
+  name: devsource
+  version: {{ version }}
+
+build:
+  noarch: generic
