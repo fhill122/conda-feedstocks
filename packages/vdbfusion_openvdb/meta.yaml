@@ -1,0 +1,35 @@
+{% set name = "VDBFusion_OpenVDB" %}
+{% set version = "c11012369b1d85cfef357113c69766ce95c52395" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/nachovizzo/openvdb.git
+  # git_depth: 1
+  git_rev: c11012369b1d85cfef357113c69766ce95c52395
+
+build:
+  number: 0
+  skip: true  # [win and vc<14]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - make  # [not win]
+  
+  host:
+    - blosc
+    - boost
+    - eigen
+    - tbb
+    - tbb-devel
+    - pytest
+    - numpy>=1.20
+    - black
+    - pybind11
+    - twine
+
