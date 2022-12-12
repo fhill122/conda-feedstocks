@@ -1,0 +1,20 @@
+{% set version = "1.0.0" %}
+
+package:
+  name: cambration
+  version: {{ version }}
+
+source:
+  path: ~/Seafile/devShared/cambration
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - make
+  host:
+    - yaml-cpp
+    - eigen
+    - ceres-solver
+    - opencv
