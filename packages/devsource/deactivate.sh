@@ -7,6 +7,8 @@ export __CXXFLAGS
 export CMAKE_PREFIX_PATH=$__CMAKE_PREFIX_PATH
 unset __CMAKE_PREFIX_PATH
 
+unset DESTDIR
+
 case "$OSTYPE" in
 	darwin*)
 		export LDFLAGS=$__LDFLAGS
